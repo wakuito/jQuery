@@ -1,0 +1,134 @@
+/* 追記 footer下の余白をなくすため */
+html, body, .container {
+    height: 100%;
+}
+
+.man_image {
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.header h1 {
+    padding: 10px 5px;
+    margin-top: 0;
+}
+
+.container {
+    background-color: rgb(238, 220, 179);
+    margin: 0px;
+}
+
+/* htmlにimgを入れるのではなく、background-imageで画像設定するようにしてrepeat-xを使った
+position absoluteとbottom 0でページ最下部に固定し、どんな画面サイズでも最下部にfooterが来るようにした
+heightとwidthは適当 */
+.footer {
+    /* block-size: 200px; */
+    height: 100px;
+    width: 100%;
+    background-image: url("../images/corn.jpg");
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 
+.table tr{
+    letter-spacing: 0.5rem;
+    height: 1rem;
+}
+
+.table th{
+    width: 50%;
+    text-align: right;
+    padding-right: 5px;
+    height: 1rem; */
+/* }
+
+.table td{
+    text-align: left;
+    padding-left: 5px;
+} */
+
+/* 画像が間延びしてボケていたので、footerにcssを設定した */
+/* .corn_image {
+    height: 200px;
+    width: 100%;
+} */
+
+
+/* 追記　tableの左にmarginを入れて強引にセンターにしていたが、
+画面サイズは見る人のPCサイズによって変わるのでどんな場合でもセンタリングされるように変更（上下100px、左右auto）
+tableで文字サイズを指定することでtable内の文字サイズを統一 & 全てboldに
+*/
+.table {
+    /* margin-left: 350px; */
+    margin: 100px auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.point {
+    text-align: left;
+}
+
+/* aでサイズを指定せず、tableで指定した */
+a {
+    /* font-size: 24px; */
+    font-weight: bold;
+    color: black;
+}
+
+a:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.tab {
+    list-style:none;
+    overflow:hidden;
+    margin: 0;
+  }
+  .tab li {
+    background:#acabab;
+    padding:5px 25px;
+    float:left;
+    margin-right:1px;
+  }
+  .tab li.select {
+    background:#d6cf68;
+  }
+  .tabcontent {
+    list-style:none;
+    margin: 0;
+  }
+  .tabcontent li{
+    background:#d6cf68;
+    padding:5px;
+    width: 600px;
+  }
+  .hide {
+    display:none;
+  }
+
+  #accordion {
+    width: 500px;
+    margin: auto;
+  }
+  #accordion dt {
+    border-bottom: solid 1px white;
+    background-color: #ccc;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    height: 12px;
+  }
+  #accordion dd {
+    border: solid 1px #ccc;
+    margin: 0px;
+    padding: 10px;
+  }
